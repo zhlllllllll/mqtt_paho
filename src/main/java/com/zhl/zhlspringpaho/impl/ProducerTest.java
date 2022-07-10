@@ -15,6 +15,6 @@ public class ProducerTest {
 
     @MqttProducer(connection ="messagePublishAdapter" ,topic = "test/zhl", qos = QosType.QOS1,delay = 3)
     public String sendMessage(String message) {
-        return System.currentTimeMillis()+"";
+        return message;
     }
 }
