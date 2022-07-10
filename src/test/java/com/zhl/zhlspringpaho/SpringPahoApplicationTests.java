@@ -19,7 +19,7 @@ public class SpringPahoApplicationTests {
 
         final ProducerTest producerTest = applicationContext.getBean("producerTest", ProducerTest.class);
         for (int i = 0; ; i++) {
-            producerTest.sendMessage(String.format("message %d ", i));
+            producerTest.sendMessage(System.currentTimeMillis()+"");
             Thread.sleep(2000);
         }
 
